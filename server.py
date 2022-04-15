@@ -189,7 +189,6 @@ class EchoServer(protocol.Protocol):
 
     #this function is activated when a call starts ringing
     def ignore(self, i, call):
-        print(100)
         time.sleep(10)  #waits 10 seconds after starts ringing to verify if it's still ringing
         if (call in self.sCC.call_and_op and self.sCC.op_state_and_call[i][0]=='ringing'):  #if there's a call ringing for the operator
             aux1='Call '+ call+ ' ignored by operator '+ i
